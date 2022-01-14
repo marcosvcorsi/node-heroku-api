@@ -4,19 +4,19 @@ import { logger } from "../utils/logger";
 const routes = Router();
 
 routes.get("/info", (req, res) => {
-  logger.info({ aaa: "bbb" }, "info");
+  logger.info("info", { ccc: "ddd" });
 
   return res.send("info");
 });
 
 routes.get("/warn", (req, res) => {
-  logger.warn({ aaa: "bbb" }, "warn");
+  logger.warn("warn", { aaa: "bbb" });
 
   return res.send("warn");
 });
 
 routes.get("/error", (req, res) => {
-  logger.error({ aaa: "bbb" }, "error");
+  logger.error("error", { fff: "ddd" });
 
   return res.send("error");
 });
