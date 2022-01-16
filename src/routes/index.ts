@@ -1,6 +1,5 @@
 import { Router } from "express";
 import { logger } from "../utils/logger";
-import { version } from "../../package.json";
 
 const routes = Router();
 
@@ -23,7 +22,7 @@ routes.get("/error", (req, res) => {
 });
 
 routes.get("/", (req, res) => {
-  return res.send(`It is running version: ${version}`);
+  return res.send("It is running");
 });
 
 export { routes };
