@@ -16,6 +16,4 @@ app.use(routes);
 
 const port = process.env.PORT ?? 3000;
 
-throw new Error("Not starting this");
-
 app.listen(port, () => logger.info(`Server is running on port ${port}`));
