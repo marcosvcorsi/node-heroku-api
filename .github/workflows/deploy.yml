@@ -39,11 +39,11 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: npm i --silent
-        
+
       # Install dependencies
       - name: Build
         run: npm run build
-      
+
       - name: Deploy Heroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
@@ -52,3 +52,4 @@ jobs:
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           usedocker: true
           docker_heroku_process_type: web
+          stack: container
