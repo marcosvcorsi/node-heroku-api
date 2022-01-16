@@ -53,3 +53,7 @@ jobs:
           usedocker: true
           docker_heroku_process_type: web
           stack: container
+          healthcheck: "https://${{secrets.HEROKU_APP_NAME}}.herokuapp.com/health"
+          checkstring: "ok"
+          delay: 10
+          rollbackonhealthcheckfailed: true

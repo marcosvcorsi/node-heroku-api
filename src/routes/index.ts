@@ -21,8 +21,4 @@ routes.get("/error", (req, res) => {
   return res.send("error");
 });
 
-routes.get("/", (req, res) => {
-  return res.send("It is running");
-});
-
 export { routes };
